@@ -3,6 +3,7 @@ import "./App.css";
 import Average from "./Average";
 import Counter from "./Counter";
 import Info from "./Info";
+import RefTest from "./RefTest";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       {visible && <Info></Info>}
       <hr></hr>
       <Average></Average>
+      <RefTest></RefTest>
     </>
   );
 }

@@ -30,4 +30,6 @@
     - dispatch함수 : action을 발생시키는 함수
       - dispatch함수( action객체 ) -> 리듀서함수를 action객체를 가지고 호출
     - 리듀서함수 : 실제 상태 변경하는 함수
-  - 
+
+4. useMemo
+  - 컴포넌트 내부의 연산작용을 최적화

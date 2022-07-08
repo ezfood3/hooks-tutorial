@@ -33,3 +33,30 @@
 
 4. useMemo
   - 컴포넌트 내부의 연산작용을 최적화
+  - 특정 상태값이 변경되었을 때만 실행
+
+5. useCallback
+  - useMemo와 상당히 비슷한 함수
+  - 이벤트핸들링 함수를 필요할 때만 생성하도록 하는 경우
+  - useCallback(등록하려는함수, [상태값이 변경되면 등록하려는 함수가 생성하려는 상태값명])
+```js
+useCallback(()=>{console.log('작업시키키')},[]);
+useMemo(()=>{
+  // const fn = () =>{
+  //   console.log('작업시키키');
+  // }
+  // return fn;
+  return (()=>{
+    console.log('작업시키키');
+  });
+},[]);
+```
+
+6. useRef
+  - Hook은 함수형 컴포넌트에서 ref를 쉽게 사용할 수 있도록 해 줌
+  - current 사용
+  - createRef() 참고
+  - 함수형 컴포넌트에서 로컬변수로 사용할 때 유용, 로컬변수-화면 렌더링에 영향주지 않음
+
+7. 사용자 정의 Hook
+  - 나만의 Hook 작성하기

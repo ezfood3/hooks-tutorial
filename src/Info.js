@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useReducer } from "react";
+import useInputs from "./useInputs";
 
 // Reducer의 장점
 const userInfoUpdate = (state, action) => {
@@ -31,6 +32,13 @@ const Info = () => {
   const onChangeNickName = (e) => {
     setNickName(e.target.value);
   };
+
+  // useInputs
+  const [myHookStates, onChangeMyHook] = useInputs({
+    name2: "",
+    nickName2: "",
+  });
+  const { name2, nickName2 } = myHookStates;
 
   // useEffect(() => {
   //   console.log("렌더링 완료 ");
@@ -91,6 +99,28 @@ const Info = () => {
       <div>
         <b>닉네임 : </b>
         {nickName1}
+      </div>
+      <div>
+        <input
+          type="text"
+          name="name2"
+          value={name2}
+          onChange={onChangeMyHook}
+        ></input>
+        <input
+          type="text"
+          name="nickName2"
+          value={nickName2}
+          onChange={onChangeMyHook}
+        ></input>
+      </div>
+      <div>
+        <b>이름 : </b>
+        {name2}
+      </div>
+      <div>
+        <b>닉네임 : </b>
+        {nickName2}
       </div>
     </>
   );

@@ -58,5 +58,10 @@ useMemo(()=>{
   - createRef() 참고
   - 함수형 컴포넌트에서 로컬변수로 사용할 때 유용, 로컬변수-화면 렌더링에 영향주지 않음
 
-7. 사용자 정의 Hook
-  - 나만의 Hook 작성하기
+7. 사용자 정의 Hook : 나만의 Hook 작성하기
+  - customized Hook
+    - 코드의 재사용
+  - Hook 이름정하기
+    - useInputs
+    - useInputs.js
+

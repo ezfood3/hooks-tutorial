@@ -67,7 +67,7 @@ const calculateAvg = (arr) => {
 const Average = () => {
   const [numArr, setNumArr] = useState([]);
   const [num, setNum] = useState("");
-  const inputTag = useRef(null);
+  const inputTag = useRef();
 
   const onChange = useCallback((e) => {
     setNum(e.target.value);
